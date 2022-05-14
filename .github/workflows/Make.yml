@@ -6,31 +6,31 @@ on:
       LIBRARY_NAME:
         description: 'LIBRARY_NAME'
         required: true
-        default: 'twrp'
+        default: 'omni'
       LIBRARY_URL:
         description: 'LIBRARY_URL'
         required: true
-        default: 'https://github.com/HK4567/platform_manifest_twrp_aosp-hk.git'
+        default: 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git'
       LIBRARY_BRANCH:
         description: 'LIBRARY_BRANCH'
         required: true
-        default: 'master'
+        default: 'twrp-5.1'
       DEVICE_URL:
         description: 'DEVICE_URL'
         required: true
-        default: 'https://github.com/HK4567/android_device_lenvovo_TB-J706F-Twrp.git'
+        default: 'https://github.com/HK4567/android_device_vivo_pd1510-twrp.git'
       DEVICE_BRANCH:
         description: 'DEVICE_BRANCH'
         required: true
-        default: 'Android-11'
+        default: 'master'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/lenovo/J706F'
+        default: 'device/vivo/PD1510'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'J706F'
+        default: 'PD1510'
 
 env:
   TZ: Asia/Shanghai
