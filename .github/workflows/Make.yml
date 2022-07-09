@@ -14,11 +14,11 @@ on:
       LIBRARY_BRANCH:
         description: 'LIBRARY_BRANCH'
         required: true
-        default: 'twrp-5.1'
+        default: 'twrp-9.0'
       DEVICE_URL:
         description: 'DEVICE_URL'
         required: true
-        default: 'https://github.com/HK4567/android_device_vivo_pd1510-twrp.git'
+        default: 'https://github.com/HK4567/android_device_oppo_PDBM00-Twrp.git'
       DEVICE_BRANCH:
         description: 'DEVICE_BRANCH'
         required: true
@@ -26,11 +26,11 @@ on:
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/vivo/PD1510'
+        default: 'device/oppo/PDBM00'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'PD1510'
+        default: 'PDBM00'
 
 env:
   TZ: Asia/Shanghai
@@ -38,7 +38,7 @@ env:
 jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     
     steps:
     - name: Maximize build disk space
