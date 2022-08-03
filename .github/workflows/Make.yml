@@ -26,11 +26,11 @@ on:
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/oppo/PDBM00'
+        default: 'device/oppo/OP4AED'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'PDBM00'
+        default: 'OP4AED'
 
 env:
   TZ: Asia/Shanghai
