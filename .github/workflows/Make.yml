@@ -18,7 +18,7 @@ on:
       DEVICE_URL:
         description: 'DEVICE_URL'
         required: true
-        default: 'https://github.com/HK4567/android_device_oppo_PDBM00-Twrp.git'
+        default: 'https://github.com/HK4567/android_device_oppo_OP4AED-Twrp.git'
       DEVICE_BRANCH:
         description: 'DEVICE_BRANCH'
         required: true
