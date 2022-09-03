@@ -6,31 +6,31 @@ on:
       LIBRARY_NAME:
         description: 'LIBRARY_NAME'
         required: true
-        default: 'omni'
+        default: 'twrp'
       LIBRARY_URL:
         description: 'LIBRARY_URL'
         required: true
-        default: 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git'
+        default: 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git'
       LIBRARY_BRANCH:
         description: 'LIBRARY_BRANCH'
         required: true
-        default: 'twrp-9.0'
+        default: 'twrp-11'
       DEVICE_URL:
         description: 'DEVICE_URL'
         required: true
-        default: 'https://github.com/HK4567/twrp_device_oppo_PBBM00.git'
+        default: 'https://github.com/HK4567/twrp_device_lenovo_TB-J706F.git'
       DEVICE_BRANCH:
         description: 'DEVICE_BRANCH'
         required: true
-        default: 'master'
+        default: 'Android-11'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/oppo/PBBM00'
+        default: 'device/lenovo/J706F'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'PBBM00'
+        default: 'J706F'
 
 env:
   TZ: Asia/Shanghai
