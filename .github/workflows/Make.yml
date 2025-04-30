@@ -14,23 +14,23 @@ on:
       LIBRARY_BRANCH:
         description: 'LIBRARY_BRANCH'
         required: true
-        default: 'twrp-8.1'
+        default: 'twrp-10.0-deprecated'
       DEVICE_URL:
         description: 'DEVICE_URL'
         required: true
-        default: 'https://github.com/HK4567/twrp_device_mid_PM8001.git'
+        default: 'https://github.com/Jacob5106/Android_hk_device_samsung_astarqltechn'
       DEVICE_BRANCH:
         description: 'DEVICE_BRANCH'
         required: true
-        default: 'master'
+        default: 'main'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/mid/PM8001'
+        default: 'device_samsung_astarqltechn'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'PM8001'
+        default: 'astarqltechn'
 
 env:
   TZ: Asia/Shanghai
