@@ -85,12 +85,22 @@ jobs:
         cd workspace
         git config --global user.name "Hikaru's Action-Build-Bot"
         git config --global user.email "Android@teio.tk"
-        repo init --depth=1 -u ${{ github.event.inputs.LIBRARY_URL }} -b ${{ github.event.inputs.LIBRARY_BRANCH }} || \
-        repo init --depth=1 -u ${{ github.event.inputs.LIBRARY_URL }} -b fallback-branch
+        # 检测地址并动态更新
+        LIBRARY_URL="${{ github.event.inputs.LIBRARY_URL }}"
+        LIBRARY_BRANCH="${{ github.event.inputs.LIBRARY_BRANCH }}"
+        if ! git ls-remote --heads $LIBRARY_URL $LIBRARY_BRANCH; then
+        echo "指定的分支或地址不存在，尝试使用备用地址..."
+        LIBRARY_URL="https://github.com/omnirom/android_frameworks_base_old"
+        LIBRARY_BRANCH="android-10"
+        fi
+    
+        repo init --depth=1 -u $LIBRARY_URL -b $LIBRARY_BRANCH
+    
+        # 替换 manifest 文件中的旧地址
         sed -i 's|https://github.com/omnirom/android_system_core|https://github.com/omnirom/android_system_core_old|g' .repo/manifest.xml
         sed -i 's|https://github.com/omnirom/android_frameworks_base|https://github.com/omnirom/android_frameworks_base_old|g' .repo/manifest.xml
-      id: pwd
-     
+        id: pwd
+      
     - name: Repo Sync
       run: |
         PATH=~/bin:$PATH
