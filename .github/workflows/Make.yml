@@ -83,10 +83,10 @@ jobs:
         PATH=~/bin:$PATH
         mkdir workspace
         cd workspace
-        echo "::set-output name=pwd::$(pwd)"
         git config --global user.name "Hikaru's Action-Build-Bot"
         git config --global user.email "Android@teio.tk"
-        repo init --depth=1 -u ${{ github.event.inputs.LIBRARY_URL }} -b ${{ github.event.inputs.LIBRARY_BRANCH }}
+        repo init --depth=1 -u ${{ github.event.inputs.LIBRARY_URL }} -b ${{ github.event.inputs.LIBRARY_BRANCH }} || \
+        repo init --depth=1 -u ${{ github.event.inputs.LIBRARY_URL }} -b fallback-branch
         sed -i 's|https://github.com/omnirom/android_system_core|https://github.com/omnirom/android_system_core_old|g' .repo/manifest.xml
         sed -i 's|https://github.com/omnirom/android_frameworks_base|https://github.com/omnirom/android_frameworks_base_old|g' .repo/manifest.xml
       id: pwd
