@@ -107,10 +107,6 @@ jobs:
           sed -i 's|https://github.com/omnirom/android_frameworks_base|https://github.com/omnirom/android_frameworks_base_old|g' .repo/manifest.xml
         fi
       id: repo-init
-
-    - name: Verify manifest
-      run: |
-        cat workspace/.repo/manifest.xml | grep "android_frameworks_base"
           
     - name: Repo Sync
       run: |
