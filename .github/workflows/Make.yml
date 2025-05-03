@@ -108,11 +108,11 @@ jobs:
         fi
       id: repo-init
           
-        - name: Repo Sync
-          run: |
-            PATH=~/bin:$PATH
-            cd workspace
-            repo sync -j$(nproc --all)
+    - name: Repo Sync
+      run: |
+        PATH=~/bin:$PATH
+        cd workspace
+         repo sync -j$(nproc --all)
       
     - name: Clone device
       run: |
